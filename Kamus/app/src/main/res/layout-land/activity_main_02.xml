@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+
+    <TableLayout
+        android:id="@+id/nula"
+        android:layout_width="wrap_content"
+        android:layout_height="316dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/rounder_edit">
+
+        <Button
+            android:id="@+id/translate_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounder_edit"
+            android:text="Cari Kata"
+            android:textColor="@color/hint" />
+
+        <Button
+            android:id="@+id/Widget_Kaganga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounder_edit"
+            android:text="Cari Aksara KAGANGa"
+            android:textColor="@color/hint" />
+
+
+        <Button
+            android:id="@+id/buttonCapture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounder_edit"
+
+            android:text="pencarian gambar"
+            android:textColor="@color/hint" />
+
+        <Button
+            android:id="@+id/buttontts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounder_edit"
+            android:text="Input Suara"
+            android:textColor="@color/hint" />
+
+        <Button
+            android:id="@+id/manual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounder_edit"
+            android:text="Kamus Buku Digital"
+            android:textColor="@color/hint" />
+
+        <Button
+            android:id="@+id/browser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounder_edit"
+            android:text="Pencarian Informasi seputar rejang"
+            android:textColor="@color/hint" />
+    </TableLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewww"
+        android:layout_width="625dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="0dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2998592050723815/8402903897"></com.google.android.gms.ads.AdView>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="103dp"
+        android:layout_above="@+id/table"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="18dp"
+        android:layout_toEndOf="@+id/nula"
+        android:background="@drawable/rounder_edit"
+        android:gravity="center"
+        android:hint="Taruh Kata Disini"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint" />
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="wrap_content"
+        android:layout_height="163dp"
+        android:layout_above="@+id/adViewww"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toEndOf="@+id/nula"
+        android:background="@drawable/rounder_edit">
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_above="@+id/rlabel"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+
+            android:layout_marginEnd="-1dp"
+            android:layout_marginRight="-1dp"
+            android:autoSizeMaxTextSize="50sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:lines="4"
+            android:maxLines="4"
+            android:text="Arti Muncul Disini"
+
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/rlabel"
+            android:layout_width="412dp"
+            android:layout_height="98dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="-3dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/bangkahulu"
+            android:gravity="center"
+            android:text=" kgf"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+    </TableLayout>
+</RelativeLayout>

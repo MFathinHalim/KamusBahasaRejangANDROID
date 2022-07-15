@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ocr">
+
+
+    <TextView
+        android:id="@+id/text_data"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="14dp"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounder_edit"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="Halo! ambil gambar atau pilih sebuah gambar dari galeri untuk Di Jadikan Teks
+Lalu Crop Kata Yang Ingin Diterjemahkan."
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_holder"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white">
+        <Button
+            android:id="@+id/buttonCapture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ambil Gambar"
+            android:background="@drawable/rounder_edit"
+            android:textColor="@color/white"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/buttoncopy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Copy Text"
+            android:background="@drawable/rounder_edit"
+            android:textColor="@color/white"
+            android:layout_margin="8dp"/>
+        <Button
+            android:id="@+id/buttonke"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounder_edit"
+            android:textColor="@color/white"
+            android:text="Cari Di Kamus"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hasiltext"
+        android:layout_width="wrap_content"
+        android:layout_height="462dp"
+        android:layout_above="@+id/linear_holder"
+        android:layout_below="@+id/text_data"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="30dp"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounder_edit"
+        android:gravity="center"
+        android:text="Hasil Muncul Disini"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

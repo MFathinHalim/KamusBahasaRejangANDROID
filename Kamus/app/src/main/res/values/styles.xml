@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Customize your theme here. -->
+
+        <item name="colorAccent">@color/background</item>
+    </style>
+
+    <style name="AppTheme.SlidrActivityTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="widget">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="MyWidgetTheme" parent="Theme.AppCompat.DayNight"/>
+
+
+</resources>

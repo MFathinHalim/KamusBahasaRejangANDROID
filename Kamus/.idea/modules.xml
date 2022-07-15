@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Kamus_Bahasa_Rejang.iml" filepath="$PROJECT_DIR$/.idea/modules/Kamus_Bahasa_Rejang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kamus_Bahasa_Rejang.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kamus_Bahasa_Rejang.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kamus_Bahasa_Rejang.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kamus_Bahasa_Rejang.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kamus_Bahasa_Rejang.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kamus_Bahasa_Rejang.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Kamus_Bahasa_Rejang.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Kamus_Bahasa_Rejang.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

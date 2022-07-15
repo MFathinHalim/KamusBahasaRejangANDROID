@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewww"
+        android:layout_width="360dp"
+        android:layout_height="73dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="0dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2998592050723815/8402903897"></com.google.android.gms.ads.AdView>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="636dp"
+        android:layout_above="@+id/adViewww"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/rejang_kaganga" />
+
+</RelativeLayout>

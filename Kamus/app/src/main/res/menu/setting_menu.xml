@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="4dp">
+
+    <item android:id="@+id/IndoKeJang"
+        android:title="Indonesia Ke Rejang"
+        app:showAsAction="never"/>
+    <item android:id="@+id/JangKeIndo"
+        android:title="Rejang Ke Indonesia"
+        app:showAsAction="never"/>
+
+</menu>

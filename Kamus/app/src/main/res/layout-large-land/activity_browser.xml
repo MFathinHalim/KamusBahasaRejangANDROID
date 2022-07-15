@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/layoutNav"
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="2dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/kembaliBtn"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounder_edit"
+            android:text="kembali"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/kedepanBtn"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounder_edit"
+            android:text="KeDepan"
+            android:textColor="@color/white" />
+
+
+        <EditText
+            android:id="@+id/browser_text"
+            android:layout_width="825dp"
+            android:layout_height="match_parent"
+            android:autoSizeMaxTextSize="50sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/rounder_edit"
+            android:gravity="center"
+            android:hint="https://duckduckgo.com"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="656dp"
+        android:layout_below="@+id/layoutNav"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</RelativeLayout>

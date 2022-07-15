@@ -1,0 +1,196 @@
+<SelectableLabel>:
+# Draw a background to indicate selection
+    color: 0,0,0,1
+    canvas.before:
+       Color:
+           rgba: (0, 0, 1, 5) if self.selected else (1, 1, 1, 1)
+       Rectangle:
+           pos: self.pos
+           size: self.size
+<MyTextInput>:
+   readonly: False
+   multiline: False
+<RV>:
+
+   bar_width: 1
+   bar_color: 1, 0, 0, 1   # red
+   bar_inactive_color: 0, 0, 1, 1   # blue
+   viewclass: 'SelectableLabel'
+   SelectableRecycleBoxLayout:
+       default_size: dp(50), dp(30)
+       default_size_hint: 1, None
+       size_hint_y: None
+       height: self.minimum_height
+       orientation: 'vertical'
+       multiselect: False
+       touch_multiselect: True
+
+
+<FlatButton@ButtonBehavior+Label>:
+    font_size: 14
+<ListcreationWindow>:
+    id:main_win
+    orientation:'vertical'
+    pos: self.pos
+    size: self.size
+    canvas.before:
+        Color:
+           rgba:(1,1,1,1)
+        Rectangle:
+           size:self.size
+           pos:self.pos
+   BoxLayout:
+       id:header
+       size_hint_y:None
+       canvas.before:
+           Color:
+               rgba:(.06, .45, .45, 1)
+           Rectangle:
+               size:self.size
+               pos:self.pos
+       Label:
+           text: "Nadeem POS system"
+           size_hint_x: .9
+           bold: True
+           color:(1,1,1,1)
+       FlatButton:
+           id:loggedin_user
+           text:'nadeem'
+           color:(1,1,1,1)
+   BoxLayout:
+       id:current
+       size_hint_y:None
+       height:50
+       canvas.before:
+           Color:
+               rgba:(.06, .45, .45, 1)
+           Rectangle:
+               size:self.size
+               pos:self.pos
+       Button:
+           text:'Current Item'
+           background_normal:''
+           background_color:(.06, .32 , .32, 1)
+           size_hint_x: .4
+
+       Button:
+           id:cur_product
+           text:'Default Product'
+           background_normal:''
+           background_color:(.06, .4 , .4, 1)
+       Button:
+           id:cur_price
+           text:'0.00'
+           background_normal:''
+           background_color:(.06, .65 , .65, 1)
+           size_hint_x: .2
+    BoxLayout:
+        padding:10
+    BoxLayout:
+        id: product_details
+        orientation: "vertical"
+        size_hint_x: .8
+        spacing:10
+        BoxLayout:
+            id:product_labels
+            size_hint_y:None
+            height:40
+            canvas.before:
+                Color:
+                    rgba:(.06,.45,.45, 1)
+                Rectangle:
+                    size:self.size
+                    pos:self.pos
+            FlatButton:
+                text:'Qty'
+                size_hint_x: .1
+            FlatButton:
+                text:'Product Code'
+                size_hint_x: .3
+            FlatButton:
+                text:'Product Name'
+                size_hint_x: .2
+            FlatButton:
+                text:'Price'
+                size_hint_x: .1
+        BoxLayout:
+            id:product_inputs
+            size_hint_y:None
+            height: 30
+            spacing:5
+            TextInput:
+                id:qty_inp
+                size_hint_x:.1
+            MyLayout:
+                orientation: 'vertical'
+                spacing: 2
+                code_inp: code_inp
+                MyTextInput:
+                    id: code_inp
+                    size_hint_x:1
+                    multiline:False
+                    size_hint_y:1
+                    on_text_validate:root.update_purchases()
+                RV:
+                    id:rv
+                    size_hint_x:1
+            TextInput:
+                id:disc_inp
+                size_hint_x:.2
+            TextInput:
+                id:price_inp
+                size_hint_x:.1
+        BoxLayout:
+            id:add_to_cart
+            orientation:"vertical"
+            BoxLayout:
+                size_hint_y:None
+                height:30
+                canvas.before:
+                    Color:
+                        rgba:(.06,.45,.45,1)
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                Label:
+                    text:'Code'
+                    size_hint_x:.2
+                Label:
+                    text:'Product name'
+                    size_hint_x:.3
+                Label:
+                    text:'Qty'
+                    size_hint_x:.1
+                Label:
+                    text:'Price'
+                    size_hint_x:.1
+            GridLayout:
+                id: products
+                cols: 1
+    BoxLayout:
+        id:preview
+        orientation:'vertical'
+        size_hint_x:.2
+
+        TextInput:
+            id:receipt_preview
+            readonly:True
+            text:"\t\t\t\tThe Collector\n\t\t\t\t123 Main St\n\t\t\t\tKnowhere, Space\n      \n\t\t\t\tTel:(555)-123-456\n\t\t\t\tReceipt No:\n\t\t\t\t Gate:\n\n"
+
+        Button:
+            id:button_pro
+            text:'Process'
+            size:75,40
+            size_hint: None,None
+BoxLayout:
+    id:footer
+    size_hint_y:None
+    height:30
+    canvas.before:
+        Color:
+            rgba:(.06,.47,.47,1)
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    Label:
+        text:'maintained by nadeem'
