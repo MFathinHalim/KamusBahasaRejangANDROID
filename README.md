@@ -1,0 +1,1 @@
+# KamusBahasaRejang-AndroidVersion
